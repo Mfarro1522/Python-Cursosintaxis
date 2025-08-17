@@ -6,9 +6,6 @@ Repositorio de aprendizaje de Python desde cero, con sintaxis, ejemplos y ejerci
 
 Este repositorio está pensado principalmente para organizar mi propio aprendizaje y práctica de Python desde los fundamentos básicos hasta conceptos más avanzados. Aunque está enfocado en mi uso personal, quiero dar crédito a las fuentes de donde obtuve la información y los ejercicios, de modo que cualquier persona interesada pueda consultarlas de primera mano.
 
-## ¿Por qué Python?
-
-Python es uno de los lenguajes de programación más populares y versátiles en la actualidad. Su sintaxis clara y legible lo hace ideal para principiantes, mientras que su potencia y flexibilidad lo convierten en una herramienta valiosa para proyectos profesionales en áreas como desarrollo web, ciencia de datos, inteligencia artificial y automatización.
 
 ## Fuentes de información y recursos
 
