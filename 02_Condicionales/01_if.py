@@ -101,30 +101,65 @@ else:
     print("Mejor quédate en casa 🏠")
 
 
-# ==================================================
+# ==============================================
+# VALORES TRUTHY Y FALSY EN PYTHON
+# ==============================================
+print("\n" + "=" * 50)
+print("VALORES TRUTHY Y FALSY")
+print("=" * 50)
 
+# En Python, algunos valores se evalúan como True o False automáticamente
 numero = 5
-if numero : #true
-    print("El numero es diferente de cero")
+if numero:  # True - cualquier número diferente de 0 es True
+    print("El número es diferente de cero")
 
 numero = 0
-if numero : #false
-    print("aqui no entraria nunca")
+if numero:  # False - solo el 0 es False
+    print("Aquí no entraría nunca")
+else:
+    print("El número es cero (Falsy)")
 
 nombre = ""
-if nombre : #false
-    print("aqui no entraria nunca , el nombre no es valido")
+if nombre:  # False - string vacío es False
+    print("Aquí no entraría nunca, el nombre no es válido")
+else:
+    print("El nombre está vacío (Falsy)")
 
+# Ejemplo con variable booleana
 numero = 5
-es_el_5 = numero == 5
-if es_el_5 : #false
-    print("no entra")
+es_el_5 = numero == 5  # True
+if es_el_5:
+    print("¡Sí es el número 5!")
 
-print("Ternaria :")
-#es if - else en una sola linea
-# [codigo si cumple la condicion] if [condicion] else [codigo si no cumple la condicion]
+# ==============================================
+# OPERADOR TERNARIO (IF-ELSE EN UNA LÍNEA)
+# ==============================================
+print("\n" + "=" * 50)
+print("OPERADOR TERNARIO")
+print("=" * 50)
 
+# Sintaxis: [valor_si_true] if [condición] else [valor_si_false]
 edad = 20
 mensaje = "Eres mayor de edad" if edad >= 18 else "Eres menor de edad"
 print(mensaje)
+
+# Más ejemplos de operador ternario
+temperatura = 25
+clima = "Caluroso" if temperatura > 30 else "Templado" if temperatura > 15 else "Frío"
+print(f"El clima está: {clima}")
+
+# ==============================================
+# RESUMEN DE VALORES FALSY EN PYTHON
+# ==============================================
+"""
+VALORES FALSY (se evalúan como False):
+- False
+- 0, 0.0, 0j (números cero)
+- "", '', "" "" (strings vacíos)
+- [], (), {} (listas, tuplas, diccionarios vacíos)
+- None
+- set() (conjunto vacío)
+
+TODOS LOS DEMÁS VALORES SON TRUTHY (se evalúan como True)
+"""
 

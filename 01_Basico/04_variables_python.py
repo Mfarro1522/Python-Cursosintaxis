@@ -1,74 +1,93 @@
-# para asignar un valor a una variable 
-# se utiliza el signo igual (=)
-# se puede utilizar cualquier nombre para la variable
-# python es un lenguaje tipado dinámico y de tipado fuerte
+# VARIABLES EN PYTHON
+# Las variables son contenedores para almacenar valores de datos
+
+# ==============================================
+# 1. ASIGNACIÓN BÁSICA DE VARIABLES
+# ==============================================
+# Para asignar un valor a una variable se utiliza el signo igual (=)
+# Se puede utilizar cualquier nombre válido para la variable
 
 mi_nombre = "mauri"
-
-print(mi_nombre)
+print(mi_nombre)  # Salida: mauri
 
 edad = 21
-print(edad)
+print(edad)      # Salida: 21
 
+# Las variables pueden cambiar de valor
 edad = 22
-print(edad)
+print(edad)      # Salida: 22
 
-#tipado dinamico : el tipo se determina en tiempo de ejecucion
-# no tienes que declararlo explicitamente
+# ==============================================
+# 2. TIPADO DINÁMICO Y FUERTE
+# ==============================================
+# Python es un lenguaje de TIPADO DINÁMICO y TIPADO FUERTE
 
+# TIPADO DINÁMICO: El tipo se determina en tiempo de ejecución
+# No tienes que declarar el tipo explícitamente
 nombre = "mauricio"
-print(type(nombre))
+print(type(nombre))  # <class 'str'>
 
 nombre = 32
-print(type(nombre))
+print(type(nombre))  # <class 'int'> - La variable cambió de tipo automáticamente
 
-nombre = "mauricio"
+nombre = "mauricio"  # Volvemos a string
 
-#tipado fuerte: python no realiza conversiones de tipo automaticamente
-#print("10" + 2)
+# TIPADO FUERTE: Python NO realiza conversiones de tipo automáticamente
+# print("10" + 2)  # ERROR: No puedes sumar string con entero sin conversión explícita
 
-#si quieres formatear o mostrar tu variables dentro de se usa f-strings formated string literals
-#desde la version 3.6 de python
-print(f"hola {nombre} , tengo {edad+5} años.")
+# ==============================================
+# 3. F-STRINGS (FORMATEO DE CADENAS)
+# ==============================================
+# Para mostrar variables dentro de strings usa f-strings (desde Python 3.6)
+print(f"Hola {nombre}, tengo {edad + 5} años.")
 
-#No recomendada forma de asignar variables pero igual saber 
-name , age , city = "mauricio" , 22 , "madrid"
+# ==============================================
+# 4. ASIGNACIÓN MÚLTIPLE
+# ==============================================
+# No es la forma más recomendada, pero es útil conocerla
+name, age, city = "mauricio", 22, "madrid"
 
-#convesiones para los nombres de las variables
-mi_nombre = "mauri"  # snake_case
-nombre = "fabian" #normal
+# ==============================================
+# 5. CONVENCIONES PARA NOMBRES DE VARIABLES
+# ==============================================
 
-#poco usados en python
-nombreCompleto = "mauri"  # camelCase
-MiNombreCompleto = "mauri" #PascalCase
-minombrecompleto = "mauri" #todojunto
+# RECOMENDADAS en Python:
+mi_nombre = "mauri"           # snake_case (MÁS USADO)
+nombre = "fabian"             # nombre simple
 
-MI_CONSTANTE = 3.1416 #en python no hay constantes de verdad solo se simulan
-                    # pero como convencion se usa upper case para que sepas que no debes de reasignar
+# MENOS USADAS en Python:
+nombreCompleto = "mauri"      # camelCase (más común en JavaScript)
+MiNombreCompleto = "mauri"    # PascalCase (más común para clases)
+minombrecompleto = "mauri"    # todo junto (NO recomendado)
 
-#nombres no validos
-#123_variable = "yo"
-#mi-variable = "yo"
-#mi variable = "yo"
-#no palabras reservadas
-#true = false 
+# CONSTANTES (simuladas):
+MI_CONSTANTE = 3.1416         # UPPER_CASE para indicar que no debe reasignarse
+                              # Python no tiene constantes reales, es solo convención
 
-#lista de palabras reservadas
-#and, as, assert, async, await, break, 
-# class, continue, def, del, elif, else, 
-# except, False, finally, for, from, global, 
-# if, import, in, is, lambda, None, nonlocal, 
-# not, or, pass, raise, return, True, try, 
-# while, with, yield
+# ==============================================
+# 6. NOMBRES NO VÁLIDOS
+# ==============================================
+# Estos nombres causarán errores:
+# 123_variable = "yo"          # No puede empezar con número
+# mi-variable = "yo"           # No puede contener guiones
+# mi variable = "yo"           # No puede contener espacios
+# true = false                 # No usar palabras reservadas
 
-#si tu quieres puedes tipar la variables
+# Lista de palabras reservadas principales:
+# and, as, assert, async, await, break, class, continue, def, del, elif, else,
+# except, False, finally, for, from, global, if, import, in, is, lambda, None,
+# nonlocal, not, or, pass, raise, return, True, try, while, with, yield
+
+# ==============================================
+# 7. TYPE HINTS (ANOTACIONES DE TIPO)
+# ==============================================
+# Puedes agregar anotaciones de tipo para documentar y mejorar el código
 usuario_esta_logueado: bool = True
-print(usuario_esta_logueado)
+print(usuario_esta_logueado)  # Salida: True
 
-#pero igual se reasigna xd , asignarlo es como comentarlo osea como documentar tu tipo
-#pero igual puedes hacer con ayudas tanto del ide como con bibliotecas externas
-usuario_esta_logueado = 42
-print(usuario_esta_logueado)
-#teniendo en cuenta que igual se ejecuta
+# IMPORTANTE: Las anotaciones son solo documentación, no previenen reasignación
+usuario_esta_logueado = 42   # Esto funciona, aunque no sea el tipo esperado
+print(usuario_esta_logueado)  # Salida: 42
 
-nombre : str = "mauri" #te avisa de mas errores aunque esta debajo del todo parecido a java
+# Las anotaciones ayudan a IDEs y herramientas de análisis estático
+nombre: str = "mauri"         # Documenta que esperamos un string

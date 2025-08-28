@@ -1,79 +1,111 @@
-# Listas : secuencias mutables de elementos
+# LISTAS EN PYTHON
+# Las listas son secuencias mutables (modificables) de elementos
+# Pueden contener cualquier tipo de dato y son muy versátiles
 
-print("Listas en Python:")
-# Definicion de una listas
+# ==============================================
+# 1. DEFINICIÓN DE LISTAS
+# ==============================================
+print("=== CREACIÓN DE LISTAS ===")
 
-lista1 = [1, 2, 3, 4, 5] # lista de enteros
-lista2 = ["manzana", "banana", "cereza"] # lista de cadenas
-lista3 = [1, "dos", 3.0, True] # lista mixta
+lista1 = [1, 2, 3, 4, 5]                    # Lista de enteros
+lista2 = ["manzana", "banana", "cereza"]     # Lista de cadenas
+lista3 = [1, "dos", 3.0, True]              # Lista mixta (diferentes tipos)
 
-lista4 = [] # lista vacia
-lista5 = list() # otra forma de crear una lista vacia
+lista4 = []                                  # Lista vacía (método 1)
+lista5 = list()                              # Lista vacía (método 2)
 
-lista6 = [(1, 'calcetin'), (3, 4), (5, 6)] # lista de listas o matrices
-matrix = [[1, 2], [4, 5], [7, 8]]
+lista6 = [(1, 'calcetín'), (3, 4), (5, 6)]  # Lista de tuplas
+matrix = [[1, 2], [4, 5], [7, 8]]           # Lista de listas (matriz)
 
-print(lista1)
-print(lista2)
-print(lista3)
-print(lista4)
-print(lista5)
-print( lista6)
-print( matrix)
+print("Lista de enteros:", lista1)
+print("Lista de cadenas:", lista2)
+print("Lista mixta:", lista3)
+print("Lista vacía:", lista4)
+print("Otra lista vacía:", lista5)
+print("Lista de tuplas:", lista6)
+print("Matriz (lista de listas):", matrix)
 
-#Aceseso a elementos de una lista por indice
-print("Acceso a elementos de una lista:")
-print(lista2[0]) #manazana
-print(lista2[1]) #banana
-print(lista2[2]) #cereza
-print(lista2[-1]) #cereza
-print(lista2[-2]) #banana
-print(lista2[-3]) #manzana
+# ==============================================
+# 2. ACCESO A ELEMENTOS POR ÍNDICE
+# ==============================================
+print("\n=== ACCESO A ELEMENTOS ===")
+print("lista2[0]:", lista2[0])    # "manzana" - Primer elemento (índice 0)
+print("lista2[1]:", lista2[1])    # "banana"  - Segundo elemento
+print("lista2[2]:", lista2[2])    # "cereza"  - Tercer elemento
 
-#Acesso a lista de listas
-print("Acceso a elementos de una lista de listas:")
-print(lista6[0][1]) #2
+# Índices negativos (desde el final)
+print("lista2[-1]:", lista2[-1])  # "cereza"  - Último elemento
+print("lista2[-2]:", lista2[-2])  # "banana"  - Penúltimo elemento
+print("lista2[-3]:", lista2[-3])  # "manzana" - Antepenúltimo elemento
 
-#Slicing o rebanado de listas
+# Acceso a listas anidadas
+print("lista6[0][1]:", lista6[0][1])  # 'calcetín' - Segundo elemento de la primera tupla
+
+# ==============================================
+# 3. SLICING (REBANADO) DE LISTAS
+# ==============================================
+print("\n=== SLICING O REBANADO ===")
 lista1 = [1, 2, 3, 4, 5]
-#quiero tomar los elementos del indice 1 al 5
-print("Slicing o rebanado de listas:")
-print(lista1[1:4]) # [2, 3, 4] 
-#quiero los 3 primeros numeros
-print(lista1[:3]) # [1, 2, 3]
-#quiero los 2 ultimos numeros
-print(lista1[3:]) # [4, 5]
 
-#quiero una compia de la lista
-print(lista1[:]) # [1, 2, 3, 4, 5]
+# Sintaxis: lista[inicio:fin] (fin no incluido)
+print("lista1[1:4]:", lista1[1:4])   # [2, 3, 4] - Elementos del índice 1 al 3
+print("lista1[:3]:", lista1[:3])     # [1, 2, 3] - Primeros 3 elementos
+print("lista1[3:]:", lista1[3:])     # [4, 5]    - Desde el índice 3 hasta el final
+print("lista1[:]:", lista1[:])       # [1, 2, 3, 4, 5] - Copia completa de la lista
 
-
-
-#hay mas magia en hacer slicing
+# ==============================================
+# 4. SLICING AVANZADO CON PASOS
+# ==============================================
+print("\n=== SLICING AVANZADO ===")
 lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# froma normal print(lista1[desde:hasta])
-# con pasos print(lista1[desde:hasta:pasos])
-#ejemplo 
+# Sintaxis: lista[inicio:fin:paso]
+print("lista1[::2]:", lista1[::2])   # [1, 3, 5, 7, 9] - De 2 en 2 (índices pares)
+print("lista1[1::2]:", lista1[1::2]) # [2, 4, 6, 8, 10] - De 2 en 2 desde índice 1
+print("lista1[::-1]:", lista1[::-1]) # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1] - Lista invertida
 
-print(lista1[::2]) # [1, 3, 5, 7, 9] de 2 en 2 o devolver indices pares 
-print(lista1[::-1]) # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1] invierte la lista
+# ==============================================
+# 5. MODIFICACIÓN DE ELEMENTOS
+# ==============================================
+print("\n=== MODIFICACIÓN DE ELEMENTOS ===")
+lista1[0] = 10  # Cambiar el primer elemento
+print("Después de modificar lista1[0]:", lista1)
 
-#modificar elementos de una lista
-
-lista1[0] = 10
-print(lista1) # [10, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-#añadir elementos a una lista
+# ==============================================
+# 6. AÑADIR ELEMENTOS A UNA LISTA
+# ==============================================
+print("\n=== AÑADIR ELEMENTOS ===")
 lista1 = [1, 2, 3]
-print(lista1)
-#larga y menos eficiente
-lista1 = lista1 + [4,5,6] #automaticamente concatena 
-print(lista1)
-#corta y eficiente
-lista1 += [7,8,9] #automaticamente concatena
-print(lista1)
+print("Lista original:", lista1)
 
-#recuperar longitud de una lista
-print("Longitud de la lista1:", len(lista1)) # 9
+# Método menos eficiente (crea nueva lista)
+lista1 = lista1 + [4, 5, 6]
+print("Después de + [4, 5, 6]:", lista1)
+
+# Método más eficiente (modifica lista existente)
+lista1 += [7, 8, 9]
+print("Después de += [7, 8, 9]:", lista1)
+
+# ==============================================
+# 7. LONGITUD DE UNA LISTA
+# ==============================================
+print("\n=== LONGITUD DE LISTA ===")
+print("Longitud de lista1:", len(lista1))
+
+# ==============================================
+# 8. EJEMPLOS PRÁCTICOS
+# ==============================================
+print("\n=== EJEMPLOS PRÁCTICOS ===")
+
+# Verificar si un elemento está en la lista
+frutas = ["manzana", "banana", "cereza"]
+print("'banana' en frutas:", "banana" in frutas)        # True
+print("'uva' en frutas:", "uva" in frutas)              # False
+
+# Obtener índice de un elemento
+print("Índice de 'banana':", frutas.index("banana"))    # 1
+
+# Contar ocurrencias
+numeros = [1, 2, 2, 3, 2, 4]
+print("Veces que aparece 2:", numeros.count(2))         # 3
 
