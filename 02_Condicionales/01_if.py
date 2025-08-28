@@ -100,3 +100,31 @@ if (edad >= 18 and tiene_dinero) and (es_fin_de_semana or not llueve):
 else:
     print("Mejor quédate en casa 🏠")
 
+
+# ==================================================
+
+numero = 5
+if numero : #true
+    print("El numero es diferente de cero")
+
+numero = 0
+if numero : #false
+    print("aqui no entraria nunca")
+
+nombre = ""
+if nombre : #false
+    print("aqui no entraria nunca , el nombre no es valido")
+
+numero = 5
+es_el_5 = numero == 5
+if es_el_5 : #false
+    print("no entra")
+
+print("Ternaria :")
+#es if - else en una sola linea
+# [codigo si cumple la condicion] if [condicion] else [codigo si no cumple la condicion]
+
+edad = 20
+mensaje = "Eres mayor de edad" if edad >= 18 else "Eres menor de edad"
+print(mensaje)
+
