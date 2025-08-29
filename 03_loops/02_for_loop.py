@@ -12,3 +12,9 @@ for numero in range(3):
     print(f"Número: {numero}")
 else:
     print("El bucle ha terminado.")
+
+#para range 
+
+for num in range(10):
+    print(num)
+    

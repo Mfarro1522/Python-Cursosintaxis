@@ -109,3 +109,35 @@ print("Índice de 'banana':", frutas.index("banana"))    # 1
 numeros = [1, 2, 2, 3, 2, 4]
 print("Veces que aparece 2:", numeros.count(2))         # 3
 
+# ==============================================
+# 9. range() PARA GENERAR LISTAS DE NÚMEROS
+# ==============================================
+print("\n=== USO DE range() ===")
+# range(inicio, fin, paso) genera una secuencia de números
+nums = range(5) #no genera una lista, genera un objeto range
+print(type(nums))  # <class 'range'>
+print(type([1, 2, 3]))  # <class 'list'>
+# para convertir a lista usamos list()
+print(list(nums))  # [0, 1, 2, 3, 4]
+
+
+# typos de range
+#range(fin) - empieza en 0, termina en fin-1, paso 1
+print(list(range(5)))  # [0, 1, 2, 3, 4]
+#range(inicio, fin) - empieza en inicio, termina en fin-1, paso 1
+print(list(range(2, 5)))  # [2, 3, 4]
+#range(inicio, fin, paso) - empieza en inicio, termina en fin-1, paso definido
+print(list(range(1, 10, 2)))  # [1, 3, 5, 7, 9]
+print(list(range(10, 0, -2)))  # [10, 8, 6, 4, 2]
+
+#range es muy optimo para usar en bucles for y valores grandes 
+#ademas para hacer alguna accion 5 veces mejora mucho la sintaxis
+
+# Ejemplo básico de un bucle for
+for _ in range(5):  #convencion usar _ cuando no se usa la variable
+    print(f"Iteración {_}")
+
+for i in range(5): #usar i cuando se usa la variable 
+    print(f"Iteración {i}")
+
+#en ejemplos pequeños no se nota pero en programas grandes si
